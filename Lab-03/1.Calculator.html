@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+      <!-- alrt : koi message show krva  -->
+      <!-- prompt : user pase thi value leva   -->
+      <!-- confirm : like conform you are a human (varification) -->
+
+      <!-- sweetAlert website for this 3 for diffrent design  -->
+
+    <script>
+
+    let num1=parseFloat(prompt("Enter num 1 : "));
+    let num2=parseFloat(prompt("Enter num 2 : "));
+
+    if(num1>num2){
+
+         let a=prompt("Which operation do you wanna perform ?");
+
+         if(a=='+'){
+
+            alert("addition of number ="+(num1 + num2));
+         }
+         else if(a=='-'){
+
+            alert("substraction of number ="+(num1 - num2));
+         }
+        else  if(a=='*'){
+
+            alert("multiplication of number ="+(num1 * num2));
+         }
+         else if(a=='/'){
+
+            alert("division of number ="+(num1 / num2));
+         }
+         else{
+
+             alert("Invalid Number ");
+         }
+    }
+    else{
+
+         alert("Enter num1 greater than num2");
+    }
+
+    </script>
+
+</body>
+</html>
