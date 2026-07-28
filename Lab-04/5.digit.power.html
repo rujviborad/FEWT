@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <script>
+
+       let n=(parseInt(prompt("Enter a 2 digit number :")));
+
+       let first = Math.floor(n / 10);
+       let second = n % 10;
+
+       let result = 1;
+
+            for(let i=1;i<=second;i++)
+            {
+                result = result * first;
+            }
+
+            document.write("First digit = " + first + "<br>");
+            document.write("Second digit = " + second + "<br>");
+            document.write("Result = " + result);
+
+            </script>
+</body>
+</html>
+
+
