@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+
+   <script>           
+               //       0           1    2      3             4
+    let sentence = ["JavaScript", "is", "a", "powerful", "language"];
+    let word = prompt("Enter a word :");
+    let index = -1;
+
+    for (let i = 0; i < sentence.length; i++) {
+        if (sentence[i] === word) {
+            index = i;
+            break;
+        }
+    }
+
+    if (index !== -1) {
+        document.write("Word found at index: " + index);
+    } else {
+        document.write("Word not found");
+    }
+</script>
+</body>
+</html>
+
+  </body>
+</html>

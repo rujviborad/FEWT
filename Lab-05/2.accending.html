@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <!-- // map will give you new array  -->
+
+       <script>
+        let n=parseInt(prompt("Enter array size :"));
+
+        let a=[];
+        for(i=0;i<n;i++){
+
+            j=parseInt(prompt("enter a no :"));
+            a.push(j);
+        }
+         document.write("Unshorted array = "+a+"<br/>");
+
+         for(i=0;i<n;i++){
+
+            for(j=i+1;j<n;j++){
+
+                     let temp;
+                     if(a[i]>a[j]){
+
+                        temp=a[i];
+                        a[i]=a[j];
+                        a[j]=temp;
+                     }
+            }
+         }
+         document.write("shorted array = "+a+"<br/>");
+       </script>
+</body>
+</html>
