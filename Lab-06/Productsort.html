@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <script>
+             let Product=[{
+
+                 Prod_name : "Face Wash",
+                 Prod_img : "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQTv5kaa0HzYjBWoKy1qO1jE5R8zyMOGsQDFk8DbhmkQZNsAOza-uA4mADccqGsThYkqW1O_B8EI7oWDqS9SxB98TQzw9MjJnQpZp6ci1A",
+                 Prod_Brand : "Dot and Key",
+                 Prod_rating : 4.5,
+                },
+{
+                 Prod_name : "Sunscreen",
+                 Prod_img : "https://www.mywishcare.com/cdn/shop/files/1_1.jpg?v=1780657511&width=600",
+                 Prod_Brand : "WishCare",
+                 Prod_rating : 4.3,
+                }];
+
+                for(i=0;i<Product.length;i++){
+
+                    document.write("name="+Product[i].Prod_name+"<br/>");
+                    document.write("<img src=\""+Product[i].Prod_img+"\"/>"+"<br/>");
+                    // document.write(`<img src="${Product[i].Prod_img}"/>`+"<br/>");   another one 
+                    document.write("Brand="+Product[i].Prod_Brand+"<br/>");
+                    document.write("Rating ="+Product[i].Prod_rating+"<br/>");
+
+                    document.write("<br/>");
+                    document.write("<hr/>");
+                    document.write("<br/>");
+                }
+       </script>
+          </script>
+</body>
+</html>

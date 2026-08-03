@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faculty_Array</title>
+</head>
+<body>
+       <script>
+
+                let faculty=[{
+
+                 fac_name : "arjunsir",
+                 fac_img : "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/15---28-04-2023-02-07-35.jpg",
+                 fac_sub : "FEWT",
+                 fac_exp : 16,
+                },
+{
+                 fac_name : "gopimam",
+                 fac_img : "https://du-website.s3.ap-south-1.amazonaws.com/U01/Faculty-Photo/5---29-04-2023-11-00-29.jpg",
+                 fac_sub : "AIML",
+                 fac_exp : 25,
+                }];
+
+                for(i=0;i<faculty.length;i++){
+
+                    document.write("name="+faculty[i].fac_name+"<br/>");
+                    document.write("<img src=\""+faculty[i].fac_img+"\"/>"+"<br/>");
+                    // document.write(`<img src="${faculty[i].fac_img}"/>`+"<br/>");   another one 
+                    document.write("sub="+faculty[i].fac_sub+"<br/>");
+                    document.write("exprience="+faculty[i].fac_exp+"<br/>");
+                }
+       </script>
+</body>
+</html>

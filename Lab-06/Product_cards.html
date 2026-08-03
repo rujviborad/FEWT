@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Product_Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    
+        <script>
+                    let Product=[{
+
+                 Prod_name : "Face Wash",
+                 Prod_img : "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQTv5kaa0HzYjBWoKy1qO1jE5R8zyMOGsQDFk8DbhmkQZNsAOza-uA4mADccqGsThYkqW1O_B8EI7oWDqS9SxB98TQzw9MjJnQpZp6ci1A",
+                 Prod_Brand : "Dot and Key",
+                 Prod_rating : 4.5,
+                 prod_description : "Watermelon Gel Face Wash Suitable for: NORMAL, OILY & COMBINATION SKIN"
+                },
+{
+                 Prod_name : "Sunscreen",
+                 Prod_img : "https://www.mywishcare.com/cdn/shop/files/1_1.jpg?v=1780657511&width=600",
+                 Prod_Brand : "WishCare",
+                 Prod_rating : 4.3,
+                 prod_description :"Niacinamide Oil Balance Fluid Sunscreen | SPF50 PA++++"
+                }];
+
+                for(i=0;i<Product.length;i++){
+
+                    // document.write("name="+Product[i].Prod_name+"<br/>");
+                    // document.write("<img src=\""+Product[i].Prod_img+"\"/>"+"<br/>");
+                    // // document.write(`<img src="${Product[i].Prod_img}"/>`+"<br/>");   another one 
+                    // document.write("Brand="+Product[i].Prod_Brand+"<br/>");
+                    // document.write("Rating ="+Product[i].Prod_rating+"<br/>");
+
+                    document.write(`<div class="card" style="width: 18rem;">
+                        <img src="${Product[i].Prod_img}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${Product[i].Prod_name}</h5>
+                            <p class="card-text">${Product[i].prod_description}</p>
+                            <a href="#" class="btn btn-primary">Click Here To View Product</a>
+                        </div></div>`)
+
+                    document.write("<br/>");
+                    document.write("<hr/>");
+                    document.write("<br/>");
+                }
+        </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
