@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static login page</title>
+</head>
+<body>
+
+
+
+       Username :
+       <input type="text" id="user"><br><br> 
+       
+       Password :
+       <input type="text" id="password"><br><br>
+
+       <button onclick="login()">Login</button>
+
+       <script>
+
+            function login(){
+
+                    let u=document.getElementById("user").value;
+                    let p=document.getElementById("password").value;
+
+                    if(u=="rujvi" && p==7777){
+
+                        alert("Login Successful");
+                    }
+                    else{
+
+                        alert("Invalid");
+                    }
+
+            }
+
+       </script>
+
+</body>
+</html>
