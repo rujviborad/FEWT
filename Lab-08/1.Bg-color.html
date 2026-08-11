@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bg-color</title>
+</head>
+<body>
+        
+        <style>
+                        #myDiv {
+                        width: 100%;
+                        height: 500px;
+                        background: rgb(255, 0, 0);
+                    }
+                    </style>
+                </head>
+                <body>
+                    <button onclick="changeBG()">Click</button>
+                    <div id="myDiv"></div>
+                    <script>
+                    function changeBG() {
+                        md = document.getElementById("myDiv");
+                        rColor = Math.floor(Math.random() * 255);
+                        gColor = Math.floor(Math.random() * 255);
+                        bColor = Math.floor(Math.random() * 255);
+                        md.style.background = `rgb(${rColor},${gColor},${bColor})`;
+                    }
+        </script>
+</body>
+</html>

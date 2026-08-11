@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MouseEvent</title>
+</head>
+<body>
+    
+        <button id="btn">Click Here</button>
+
+       <h2 id="text"></h2>
+               
+       <script>
+                let btn= document.getElementById("btn");
+                let text=document.getElementById("text");
+
+
+                btn.onclick = function ()
+                 {
+                    text.innerHTML = "Mouse Click ";
+                }
+
+                    btn.ondblclick = function () 
+                    {
+                        text.innerHTML = "Double Click ";
+                    }
+
+                btn.onmouseover = function () 
+                {
+                    text.innerHTML = "Mouse Over ";
+                }
+
+                btn.onmouseout = function () 
+                {
+                    text.innerHTML = "Mouse Out ";
+                }
+
+                btn.onmousedown = function () 
+                {
+                    text.innerHTML = "Mouse Down ";
+                }
+
+                btn.onmouseup = function ()
+                 {
+                    text.innerHTML = "Mouse Up ";
+                }
+                </script>
+
+</body>
+</html>
+
+</body>
+</html>

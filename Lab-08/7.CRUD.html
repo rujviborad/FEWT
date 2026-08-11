@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>CRUD: </h2>
+    <input type="text" name="" id="name">
+   <button type="button" onclick="addData()">Add</button>
+
+   <br>   <br>
+
+    <table border="2">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+
+        <tbody id="tabledata">
+
+        </tbody>
+    </table>
+
+
+    <script>
+    let arr = [];
+    let editIndex = -1;
+
+    function addData()
+    {
+        let name = document.getElementById("name").value;
+
+        if(name == "")
+        {
+            alert("Invalid input: Pls enter name");
+            return;
+        }
+
+        if(editIndex == -1)
+        {
+            arr.push(name);
+        }
+        else
+        {
+            arr[editIndex] = name;
+            editIndex = -1;
+        }
+
+        document.getElementById("name").value = "";
+
+        showData();
+    }
+    
+    function showData()
+    {
+        let data = "";
+
+        for(let i=0;i<arr.length;i++){
+            data += "<tr>";
+
+            data += "<td>"+(i+1)+"</td>";
+
+            data += "<td>";
+            data += "<button onclick='updateData("+i+")'>Update</button> ";
+            data += "<button onclick='deleteData("+i+")'>Delete</button>";
+            data += "</td>";
+
+            data += "<td>"+arr[i]+"</td>";
+
+            data += "</tr>";
+        }
+
+        document.getElementById("tabledata").innerHTML = data;
+    }
+
+    function updateData(index)
+    {
+        document.getElementById("name").value = arr[index];
+        editIndex = index;
+    }
+
+    function deleteData(index)
+    {
+        arr.splice(index,1);
+        showData();
+    }
+    </script>
+</body>
+</html>
+
+
+<!-- Q.WAP to perform CRUD operation on Array using HTML and JavaScript. 
+
+name add by input text
+one table with id,action,name are 3 th 
+show all i.e by read 
+action i.e onclick update,delete
+
+using array
+
+tabledata should be accessed in showdata()
+
+output should be
+heading than input box name beside it add button
+
+than doenwards table with 3 column
+id,action,name
+action contains 2 buttons , update and delete -->
