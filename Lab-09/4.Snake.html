@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+             <tittle>Snake Game</tittle>
+             <style>
+      
+        body{
+            text-align:center;
+            font-family:Arial;
+        }
+
+        canvas{
+            border:2px solid black;
+            background:lightyellow;
+        }
+
+    </style>
+
+</head>
+<body>
+
+        <h2>Snake Game</h2>
+
+<h3>Lives Left: <span id="life">3</span></h3>
+
+<canvas id="game" width="400" height="400"></canvas>
+
+<script>
+
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+const box = 20;
+
+let snake = [{x:200,y:200}];
+let direction = "RIGHT";
+let lives = 3;
+
+// Arrow Keys
+document.addEventListener("keydown", function(e){
+
+    if(e.key=="ArrowLeft" && direction!="RIGHT")
+        direction="LEFT";
+
+    if(e.key=="ArrowRight" && direction!="LEFT")
+        direction="RIGHT";
+
+    if(e.key=="ArrowUp" && direction!="DOWN")
+        direction="UP";
+
+    if(e.key=="ArrowDown" && direction!="UP")
+        direction="DOWN";
+
+});
+
+function restartSnake()
+{
+    snake=[{x:200,y:200}];
+    direction="RIGHT";
+}
+
+function drawGame()
+{
+    ctx.clearRect(0,0,400,400);
+
+    // Draw Snake
+    ctx.fillStyle="green";
+
+    for(let i=0;i<snake.length;i++)
+    {
+        ctx.fillRect(snake[i].x,snake[i].y,box,box);
+    }
+
+    let headX=snake[0].x;
+    let headY=snake[0].y;
+
+    if(direction=="LEFT") headX-=box;
+    if(direction=="RIGHT") headX+=box;
+    if(direction=="UP") headY-=box;
+    if(direction=="DOWN") headY+=box;
+
+    // Wall Collision
+    if(headX<0 || headY<0 || headX>=400 || headY>=400)
+    {
+        lives--;
+        document.getElementById("life").innerHTML=lives;
+
+        if(lives==0)
+        {
+            clearInterval(game);
+            alert("Game Over");
+            return;
+        }
+
+        alert("Life Lost! Remaining Lives: " + lives);
+        restartSnake();
+        return;
+    }
+
+    snake.pop();
+    snake.unshift({x:headX,y:headY});
+}
+
+let game=setInterval(drawGame,150);
+
+</script>
+
+</body>
+</html>

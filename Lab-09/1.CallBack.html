@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack</title>
+</head>
+<body>
+      
+        <script>
+
+                function print(value){
+
+                     document.write("Sum of Number is : " , value);
+
+                }
+                function sum(a,b,callback){
+
+                   let add = a + b;
+                    callback(add);
+                }
+
+                sum(5,2,print);
+
+        </script>
+
+</body>
+</html>
